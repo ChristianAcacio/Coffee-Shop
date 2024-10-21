@@ -153,9 +153,35 @@ button:hover {
     box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.juntar h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+
+.class{
+    display: flex;
+    flex-direction: column;
+}
+
 .pagamento p {
     font-size: 20px;
+    position: relative;
 }
+
+aside button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px; 
+    position: absolute;
+    z-index: 10;
+}
+
 
 
 

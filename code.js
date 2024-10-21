@@ -15,27 +15,63 @@ const preços ={
 
 
 
-let valor = 0;
-let x = 0;
+let total = 0;
+let quantidade = {};
+
+
 
 
 function add(produto){  
 
-    valor += preços[produto];
-    x += 1;
+    if(!quantidade[produto]){
+        quantidade[produto] = 0
+    }
+    quantidade[produto] +=1
+    total += preços[produto];
 
 
-    let escolhas = document.getElementById("class");
-    let novoparagrafo = document.createElement("p");
-    let texto = document.createTextNode (produto); 
+    let jatem = document.getElementById(produto);
+    if(jatem){
+        let preço_produto = quantidade[produto] * preços[produto];
+        jatem.textContent = `${quantidade[produto]}x ${produto.replace("_", " ")}  $${preço_produto.toFixed(2)}`;
+    }
+    else{
 
-    novoparagrafo.appendChild(texto);
-    escolhas.appendChild(novoparagrafo);
+        let escolhas = document.getElementById("class");
+        let novoparagrafo = document.createElement("p");
+        novoparagrafo.id = produto;
+
+        let preço_produto = quantidade[produto] * preços[produto];
+        novoparagrafo.textContent = `${quantidade[produto]}x ${produto.replace("_", " ")} ${preço_produto.toFixed(2)}`
     
+        escolhas.appendChild(novoparagrafo);
 
 
+    }
 
-
-    document.getElementById("total").textContent = "Total: $" + valor.toFixed(2);
-
+    document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
 }
+
+
+
+
+
+
+/*
+let remover = document.createElement("button");
+remover.textContent = "X";
+remover.onclick = function (){
+    apagar(produto);
+}
+
+
+function apagar(produto){
+    let jatem = document.getElementById(produto);
+    if(jatem){
+        total -= quantidade[produto] * preços[produto];
+        delete quantidade[produto];
+        jatem.remove();
+        document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
+    }
+}
+*/
