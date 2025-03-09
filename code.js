@@ -1,5 +1,5 @@
 
-
+//Lista com todos os produtos e seus preços
 
 const preços ={
     Croissant : 2.00,
@@ -13,15 +13,15 @@ const preços ={
     Pepperoni_Pizza: 1.50,
 
 
-     strawberry_pie : 10.00,
-     chocolate_brownie : 4.50,
-     brazilian_pudim : 4.50,
-     waffle : 6.00,
-     donuts : 3.50,
-     macaron : 1.00,
-     cheesecake : 4.00,
-     chocolate_cake : 4.00,
-     strawberry_cake : 4.00,
+    strawberry_pie : 10.00,
+    chocolate_brownie : 4.50,
+    Brazilian_Pudim: 4.50,
+    waffle : 6.00,
+    donuts : 3.50,
+    macaron : 1.00,
+    cheesecake : 4.00,
+    chocolate_cake : 4.00,
+    strawberry_cake : 4.00,
 
 
     American_Coffee : 2.00,
@@ -36,64 +36,60 @@ const preços ={
 };
 
 
-
-let total = 0;
 let quantidade = {};
 
 
-
-
-function add(produto){  
+function add(produto){
 
     if(!quantidade[produto]){
-        quantidade[produto] = 0
-    }
-    quantidade[produto] +=1
-    total += preços[produto];
 
+        quantidade[produto] = 0;
+
+    }
+
+    quantidade[produto] += 1;
+    let preço_produto = quantidade[produto] * preços[produto];
+    let total = 0;
+    for(const produto in quantidade){
+        total += quantidade[produto] * preços[produto];
+    }
+    
 
     let jatem = document.getElementById(produto);
+
     if(jatem){
-        let preço_produto = quantidade[produto] * preços[produto];
-        jatem.textContent = `${quantidade[produto]}x ${produto.replace("_", " ")}  $${preço_produto.toFixed(2)}`;
+
+        jatem.innerHTML = `<div class=item_carrinho>
+        <img src="img/comidas/${produto}.jpg" alt="${produto}" class = "imagem_carrinho">  
+        <span class=texto_carrinho>${quantidade[produto]}x ${produto.replace("_", " ")} $${preço_produto.toFixed(2)}</span>
+        </div>`;
+
     }
     else{
 
         let escolhas = document.getElementById("class");
-        let novoparagrafo = document.createElement("p");
-        novoparagrafo.id = produto;
-
-        let preço_produto = quantidade[produto] * preços[produto];
-        novoparagrafo.textContent = `${quantidade[produto]}x ${produto.replace("_", " ")} ${preço_produto.toFixed(2)}`
-    
-        escolhas.appendChild(novoparagrafo);
-
+        let novo_paragrafo = document.createElement("P");
+        novo_paragrafo.id = produto;
+        novo_paragrafo.innerHTML = `<div class=item_carrinho>
+        <img src="img/comidas/${produto}.jpg" alt="${produto}" class = "imagem_carrinho">  
+        <span class=texto_carrinho>${quantidade[produto]}x ${produto.replace("_", " ")} $${preço_produto.toFixed(2)}</span>
+        </div>`; 
+        escolhas.appendChild(novo_paragrafo);
 
     }
 
     document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
-}
 
+    if(total !== 0){
+        let finalizar_compra = document.getElementById("finalizar_pagamento");
 
+        if(!finalizar_compra.querySelector("button")){
+            let novo_botao = document.createElement("button");
+            novo_botao.textContent = "Finalizar Compra";
+            novo_botao.classList.add("botao_pagamento")
+            finalizar_compra.appendChild(novo_botao);
+        }
 
-
-
-
-/*
-let remover = document.createElement("button");
-remover.textContent = "X";
-remover.onclick = function (){
-    apagar(produto);
-}
-
-
-function apagar(produto){
-    let jatem = document.getElementById(produto);
-    if(jatem){
-        total -= quantidade[produto] * preços[produto];
-        delete quantidade[produto];
-        jatem.remove();
-        document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
     }
+    
 }
-*/

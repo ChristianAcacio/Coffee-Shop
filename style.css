@@ -8,17 +8,29 @@
 }
 
 body{
-    background-color: #F2DCE0;
+    background-color: #ffdae1;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid gray;
+    border-top: solid gray;
+    background-color: white;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.login{
+    color: #115ab9;
+    padding: 10px;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid gray;
-    border-top: solid gray;
-    background-color: white;
-    padding: 20px 0px;
 }
 
 .logo{
@@ -35,6 +47,7 @@ ul{
     margin: 0 auto;
     text-align: center;
     flex: 1;
+    margin-top: 20px;
 }
 
 li{
@@ -50,10 +63,19 @@ li{
 
 a{
     text-decoration: none;
-    color: #0f3d49;
+    color: #115ab9  ;
 
 }
 
+.gatinho{
+    height: 70px;
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+.carrosel{
+    max-width: 100%;
+}
 
 
 
@@ -66,8 +88,8 @@ a{
 
 .categoria{
     margin: 50px 120px;
-    font-size: 30px;
-    color: #0f3d49;
+    font-size: 60px;
+    color: #115ab9;
 }
 
 
@@ -97,7 +119,7 @@ picture{
     gap: 25px; 
 }
 
-button{
+.main_button{
     width: 150px;
     height: 30px;
     position: absolute;
@@ -191,7 +213,7 @@ button:hover {
 
 .pagamento p {
     font-size: 20px;
-    position: relative;
+    margin: 0;
 }
 
 aside button{
@@ -205,6 +227,46 @@ aside button{
     z-index: 10;
 }
 
+.menu_final{
+    display: flex;
+
+
+}
+
+
+
+.imagem_carrinho{
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+    border:solid rgb(135, 67, 67);
+}
+
+.texto_carrinho{
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.item_carrinho{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.botao_pagamento{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; 
+}
+
+.total{
+    padding-top: 10px;
+}
 
 
 

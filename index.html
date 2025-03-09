@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANNEKO</title>
     <link rel="stylesheet" href="style.css">
-    <script src="code.js" ></script>
+    <script async src="code.js" ></script>
+    <link rel="shortcut icon" href="img/favicon.ico" />
 </head>
 <body>
     
@@ -25,54 +26,56 @@
             </ul>
               
         </nav>
-        
+
+        <div>
+            <picture>
+                <a href="perfil.html"><img class="gatinho" src="img/Gato_fofo.png" alt="Gatinho"></a>
+            </picture>
+            <p class="login">Login/Register</p>
+        </div>
+
     </header>
       
     <main>
 
         <section>
 
-            <div class="Cardapio">
-
-                <picture>
-                    <img class="logo" src="img/Logo horizontal.png" alt="Logo Panneko">
-                </picture>
-
-                <h2>IDEIA, NA VERDADE EU ACHO QUE VOU FAZER A IMAGEM DO CARDAPIO INTEIRA NO PHOTOSHOP E SO COLOCAR A IMAGEM DA LOGO POR CIMA DELA OU INCLUIO NA PRORIA IMAGEM MESMO
-                </h2>
-            </div>
-
-        </section>
-
-
-
-        <section>
-
-            <h1>A ideia aqui é fazer uns destaques que mudem sozinhos de tempo em tempo mas que o usuário possa tambem arrastar para o lado e ver mais sobre, se o de passar sozinho for muito bugado ou difícil de fazer deixar apenas o manual mesmo</h1>
-            <h2>Destaques</h2>
-
-            <div class="Destaques">
-
-                <div class="destaque1">
-
+            <div class="carrossel">
+                
+                <div class="slide1 primeiro">
                     <picture>
-                        <img src="#" alt="">
+                        <img class="ca" src="img/Banner 1.png" alt="Promoção">
                     </picture>
-
-                    <h2>Título</h2>
-                    <p>Descrição</p>
-
                 </div>
 
-                <div class="destaque2">
-
+                <div class="slide2">
                     <picture>
-                        <img src="#" alt="">
+                        <img src="img/Banner 2.png" alt="Promoção">
                     </picture>
+                </div>
 
-                    <h2>Título</h2>
-                    <p>Descrição</p>
+                <div class="slide3">
+                    <picture>
+                        <img src="# " alt="Promoção">
+                    </picture>
+                </div>
 
+
+
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+
+                <div class="nav-auto">
+                    <div class="bnt-1"></div>
+                    <div class="bnt-2"></div>
+                    <div class="bnt-3"></div>
+                </div>
+
+                <div>
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
                 </div>
 
             </div>
@@ -80,6 +83,8 @@
         </section>
 
     </main>
+
+    
 
 
 

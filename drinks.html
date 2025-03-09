@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANNEKO</title>
     <link rel="stylesheet" href="style.css">
-    <script src="code.js" ></script>
+    <script async src="code.js" ></script>
 </head>
 <body>
     
@@ -25,6 +25,10 @@
             </ul>
               
         </nav>
+
+        <picture>
+            <a href="perfil.html"><img class="gatinho" src="img/Gato_fofo.png" alt="Gatinho"></a>
+        </picture>
         
 
     </header>
@@ -44,8 +48,8 @@
                 <div>
                     <div class="picture-container">
                         <picture>
-                            <img src="img/Drinks/American_Coffee.jpg" alt="American Coffee" class="menu">
-                            <button onclick="add('American_Coffee')">Add to card</button>
+                            <img src="img/comidas/American_Coffee.jpg" alt="American Coffee" class="menu">
+                            <button class="main_button" onclick="add('American_Coffee')">Add to card</button>
                         </picture>
                     </div>
 
@@ -58,8 +62,8 @@
                 <div>
                     <div class="picture-container">
                         <picture>
-                            <img src="img/Drinks/Latte_Coffee.jpg" alt="Latte Coffee" class="menu">
-                            <button onclick="add('Latte_Coffee')">Add to card</button>
+                            <img src="img/comidas/Latte_Coffee.jpg" alt="Latte Coffee" class="menu">
+                            <button class="main_button" onclick="add('Latte_Coffee')">Add to card</button>
                         </picture>
                     </div>
 
@@ -72,8 +76,8 @@
                 <div>
                     <div class="picture-container">
                         <picture>
-                            <img src="img/Drinks/Macchiato_Coffee.jpg" alt="Macchiato Coffee" class="menu">
-                            <button onclick="add('Macchiato_Coffee')">Add to card</button>
+                            <img src="img/comidas/Macchiato_Coffee.jpg" alt="Macchiato Coffee" class="menu">
+                            <button class="main_button" onclick="add('Macchiato_Coffee')">Add to card</button>
                         </picture>
                     </div>
 
@@ -94,8 +98,8 @@
                 <div>
                     <div class="picture-container">
                         <picture>
-                            <img src="img/Drinks/White_Chocolate.jpg" alt="White Chocolate" class="menu">
-                            <button onclick="add('White_Chocolate')">Add to card</button>
+                            <img src="img/comidas/White_Chocolate.jpg" alt="White Chocolate" class="menu">
+                            <button class="main_button" onclick="add('White_Chocolate')">Add to card</button>
                         </picture>
                     </div>
 
@@ -108,8 +112,8 @@
                 <div>
                     <div class="picture-container">
                         <picture>
-                            <img src="img/Drinks/Hot_Chocolate.jpg" alt="Hot Chocolate" class="menu">
-                            <button onclick="add('Hot_Chocolate')">Add to card</button>
+                            <img src="img/comidas/Hot_Chocolate.jpg" alt="Hot Chocolate" class="menu">
+                            <button class="main_button" onclick="add('Hot_Chocolate')">Add to card</button>
                         </picture>
                     </div>
 
@@ -122,8 +126,8 @@
                 <div>
                     <div class="picture-container">
                         <picture>
-                            <img src="img/Drinks/Bublle_Tea.jpg" alt="Bubble Tea" class="menu">
-                            <button onclick="add('Bublle_Tea')">Add to card</button>
+                            <img src="img/comidas/Bublle_Tea.jpg" alt="Bubble Tea" class="menu">
+                            <button class="main_button" onclick="add('Bublle_Tea')">Add to card</button>
                         </picture>
                     </div>
 
@@ -144,8 +148,8 @@
                 <div>
                     <div class="picture-container">
                         <picture>
-                            <img src="img/Drinks/Strawberry_Milkshake.jpg" alt="Strawberry Milkshake" class="menu">
-                            <button onclick="add('Strawberry_Milkshake')">Add to card</button>
+                            <img src="img/comidas/Strawberry_Milkshake.jpg" alt="Strawberry Milkshake" class="menu">
+                            <button class="main_button" onclick="add('Strawberry_Milkshake')">Add to card</button>
                         </picture>
                     </div>
 
@@ -158,8 +162,8 @@
                 <div>
                     <div class="picture-container">
                         <picture>
-                            <img src="img/Drinks/Chocolate Milkshake.jpeg" alt="Chocolate Milkshake" class="menu">
-                            <button onclick="add('Chocolate_Milkshake')">Add to card</button>
+                            <img src="img/comidas/Chocolate_Milkshake.jpg" alt="Chocolate Milkshake" class="menu">
+                            <button class="main_button" onclick="add('Chocolate_Milkshake')">Add to card</button>
                         </picture>
                     </div>
 
@@ -172,8 +176,8 @@
                 <div>
                     <div class="picture-container">
                         <picture>
-                            <img src="img/Drinks/Caramel_Milkshake.jpg" alt="Caramel Milkshake" class="menu">
-                            <button onclick="add('Caramel_Milkshake')">Add to card</button>
+                            <img src="img/comidas/Caramel_Milkshake.jpg" alt="Caramel Milkshake" class="menu">
+                            <button class="main_button" onclick="add('Caramel_Milkshake')">Add to card</button>
                         </picture>
                     </div>
 
@@ -185,19 +189,21 @@
         </div>
     </main>
 
-    <aside class="pagamento" id="pagamento">
-        
-        <div class="juntar">
-        <h2>
-            ORDER
-        </h2>
+        <aside class="pagamento" id="pagamento">
+            
+            <div class="juntar">
+            <h2>
+                ORDER
+            </h2>
 
-        <div id="class" class="class"></div>
-        </div>
+            <div id="class" class="class"></div>
+            </div>
 
-        <p id="total" class="total">Total: </p>
-
-    </aside>
+            <div class="menu_final">
+                <p id="total" class="total">Total: </p> 
+                <div id="finalizar_pagamento" class="finalizar_pagamento"></div>
+            </div>    
+        </aside>
     </div>
 
 </body>
