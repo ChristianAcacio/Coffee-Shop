@@ -49,7 +49,7 @@
                     <div class="picture-container">
                         <picture>
                             <img src="img/comidas/strawberry_pie.jpg" alt="strawberry pie" class="menu">
-                            <button onclick="add('strawberry_pie')">Add to card</button>
+                            <button class="main_button" onclick="add('strawberry_pie')">Add to card</button>
                         </picture>
                     </div>
 
@@ -63,7 +63,7 @@
                     <div class="picture-container">
                         <picture>
                             <img src="img/comidas/chocolate_brownie.jpg" alt="Brownie" class="menu">
-                            <button onclick="add('chocolate_brownie')">Add to card</button>
+                            <button class="main_button" onclick="add('chocolate_brownie')">Add to card</button>
                         </picture>
                     </div>
 
@@ -77,7 +77,7 @@
                     <div class="picture-container">
                         <picture>
                             <img src="img/comidas/Brazilian_Pudim.jpg" alt="Pudim" class="menu">
-                            <button onclick="add('Brazilian_Pudim')">Add to card</button>
+                            <button class="main_button" onclick="add('Brazilian_Pudim')">Add to card</button>
                         </picture>
                     </div>
 
@@ -99,7 +99,7 @@
                     <div class="picture-container">
                         <picture>
                             <img src="img/comidas/Waffle.jpg" alt="Waffle" class="menu">
-                            <button onclick="add('waffle')">Add to card</button>
+                            <button class="main_button" onclick="add('waffle')">Add to card</button>
                         </picture>
                     </div>
 
@@ -113,7 +113,7 @@
                     <div class="picture-container">
                         <picture>
                             <img src="img/comidas/donuts.jpg" alt="donuts" class="menu">
-                            <button onclick="add('donuts')">Add to card</button>
+                            <button class="main_button" onclick="add('donuts')">Add to card</button>
                         </picture>
                     </div>
 
@@ -127,7 +127,7 @@
                     <div class="picture-container">
                         <picture>
                             <img src="img/comidas/Macaron.jpg" alt="Macaron" class="menu">
-                            <button onclick="add('macaron')">Add to card</button>
+                            <button class="main_button" onclick="add('macaron')">Add to card</button>
                         </picture>
                     </div>
 
@@ -149,7 +149,7 @@
                     <div class="picture-container">
                         <picture>
                             <img src="img/comidas/cheesecake.jpg" alt="Cheesecake" class="menu">
-                            <button onclick="add('cheesecake')">Add to card</button>
+                            <button class="main_button" onclick="add('cheesecake')">Add to card</button>
                         </picture>
                     </div>
 
@@ -163,7 +163,7 @@
                     <div class="picture-container">
                         <picture>
                             <img src="img/comidas/chocolate_cake.jpg" alt="Chocolate Cake" class="menu">
-                            <button onclick="add('chocolate_cake')">Add to card</button>
+                            <button class="main_button" onclick="add('chocolate_cake')">Add to card</button>
                         </picture>
                     </div>
 
@@ -177,7 +177,7 @@
                     <div class="picture-container">
                         <picture>
                             <img src="img/comidas/strawberry_cake.jpg" alt="Strawberry pie" class="menu">
-                            <button onclick="add('strawberry_cake')">Add to card</button>
+                            <button class="main_button" onclick="add('strawberry_cake')">Add to card</button>
                         </picture>
                     </div>
 
@@ -190,7 +190,7 @@
     </main>
 
     <aside class="pagamento" id="pagamento">
-        
+            
         <div class="juntar">
         <h2>
             ORDER
@@ -199,8 +199,10 @@
         <div id="class" class="class"></div>
         </div>
 
-        <p id="total" class="total">Total: </p>
-
+        <div class="menu_final">
+            <p id="total" class="total">Total: </p> 
+            <div id="finalizar_pagamento" class="finalizar_pagamento"></div>
+        </div>    
     </aside>
     </div>
 
