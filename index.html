@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script async src="code.js" ></script>
     <link rel="shortcut icon" href="img/favicon.ico" />
+    <script async src="slide.js"></script>
 </head>
 <body>
     
@@ -19,7 +20,6 @@
             </div>
 
             <ul class="pages">
-                <li ><a href="index.html">Home</a></li>
                 <li><a href="Savory.html">Savory</a></li>
                 <li><a href="desserts.html">Desserts</a></li>
                 <li><a href="drinks.html">Drinks</a></li>
@@ -31,56 +31,65 @@
             <picture>
                 <a href="perfil.html"><img class="gatinho" src="img/Gato_fofo.png" alt="Gatinho"></a>
             </picture>
-            <p class="login">Login/Register</p>
         </div>
 
     </header>
       
     <main>
 
-        <section>
-
-            <div class="carrossel">
-                
-                <div class="slide1 primeiro">
-                    <picture>
-                        <img class="ca" src="img/Banner 1.png" alt="Promoção">
-                    </picture>
-                </div>
-
-                <div class="slide2">
-                    <picture>
-                        <img src="img/Banner 2.png" alt="Promoção">
-                    </picture>
-                </div>
-
-                <div class="slide3">
-                    <picture>
-                        <img src="# " alt="Promoção">
-                    </picture>
-                </div>
-
-
-
-                <input type="radio" name="btn-radio" id="radio1">
-                <input type="radio" name="btn-radio" id="radio2">
-                <input type="radio" name="btn-radio" id="radio3">
-
-                <div class="nav-auto">
-                    <div class="bnt-1"></div>
-                    <div class="bnt-2"></div>
-                    <div class="bnt-3"></div>
-                </div>
-
-                <div>
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                </div>
-
+        <section class="slider">
+            <div class="slider-content">
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+        
+            <div class="slide-box primeiro">
+                <img src="img/Hava-friday.gif" alt="Black Friday das Havaianas">
             </div>
-
-        </section>
+        
+            <div class="slide-box">
+                <img src="img/Oferta-relampago.webp" alt="Oferta relâmpago imperdível, 80% de desconto">
+            </div>
+        
+            <div class="slide-box">
+                <img src="img/presente.webp" alt="O presente que todos os amigos querem">
+            </div>
+        
+            <div class="slide-box">
+                <img src="img/familia.webp" alt="Toda família ama">
+            </div>
+        
+            <div class="slide-box">
+                <img src="img/Correr.webp" alt="Não dá pra correr de havaianas, ainda bem">
+            </div>
+        
+            <div class="slide-box">
+                <img src="img/nova.webp" alt="Novas havaianas a qualidade que você merece">
+            </div>
+            
+        
+                <div class="nav-auto">
+                <div class="btn1"></div>
+                <div class="btn2"></div>
+                <div class="btn3"></div>
+                <div class="btn4"></div>
+                <div class="btn5"></div>
+                <div class="btn6"></div>
+                </div>
+            
+                <div class="nav-manual">
+                <label for="radio1" class="manual_button"></label>
+                <label for="radio2" class="manual_button"></label>
+                <label for="radio3" class="manual_button"></label>
+                <label for="radio4" class="manual_button"></label>
+                <label for="radio5" class="manual_button"></label>
+                <label for="radio6" class="manual_button"></label>
+                </div>
+            </div>    
+      </section>
 
     </main>
 

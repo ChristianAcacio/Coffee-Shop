@@ -35,8 +35,38 @@ const preços ={
     Caramel_Milkshake : 5.50,
 };
 
+let quantidade = JSON.parse(localStorage.getItem("carrinho")) || {};
 
-let quantidade = {};
+function salvarCarrinho() {
+    localStorage.setItem("carrinho", JSON.stringify(quantidade));
+}
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    let total = 0;
+    for (const produto in quantidade) {
+        if (!preços[prod]) continue
+        let preço_produto = quantidade[produto] * preços[produto];
+        total += preço_produto;
+
+        let escolhas = document.getElementById("class");
+        let novo_paragrafo = document.createElement("P");
+        novo_paragrafo.id = produto;
+        novo_paragrafo.innerHTML = `<div class="item_carrinho">
+            <img src="img/comidas/${produto}.jpg" alt="${produto}" class="imagem_carrinho">  
+            <span class="texto_carrinho">${quantidade[produto]}x ${produto.replace("_", " ")} $${preço_produto.toFixed(2)}</span>
+        </div>`; 
+        escolhas.appendChild(novo_paragrafo);
+    }
+
+    document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
+});
+
+
+
+
+
 
 
 function add(produto){
@@ -50,9 +80,13 @@ function add(produto){
     quantidade[produto] += 1;
     let preço_produto = quantidade[produto] * preços[produto];
     let total = 0;
-    for(const produto in quantidade){
-        total += quantidade[produto] * preços[produto];
-    }
+
+
+    for(const p in quantidade){
+        if(preços[p]){
+            total += quantidade[produto] * preços[produto];
+        }
+   }
     
 
     let jatem = document.getElementById(produto);
@@ -92,4 +126,6 @@ function add(produto){
 
     }
     
+
+    salvarCarrinho();
 }
