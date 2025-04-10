@@ -108,7 +108,7 @@ picture{
 
 .opcao{
     width: 240px;
-    background-color: #FFF8F0;
+    background-color: white;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     font-family: 'Segoe UI', sans-serif;
@@ -318,57 +318,89 @@ aside button{
 
 
 
-.slider{
-    margin: 0 auto;
+.slider {
     width: 100%;
-    height: auto;
-    padding: 0;
+    height: 70vh;
     overflow: hidden;
-}
-
-.slider-content{
-    width: 600%;    
-    height: auto;
-    display: flex;
-}
-
-.slider-content input{
-    display: none;
-}
-
-.slide-box{
-    width: 25%;
-    height: auto;
     position: relative;
-    text-align: center;
-    transition: 1s;
+    margin: 0;
+    left: 0;
 }
 
-.slide-box img{
-    width: 1000%;
-    max-width: 100%;
+.slides-box {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
-.nav-manual, .nav-auto{
+.slider-content input[type="radio"] {
+    display: none !important;
+  }
+
+.slide-box {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-box img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
     position: absolute;
-    width: 100%;
-    margin-top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media (min-width: 1200px) {
+    .slide-box img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.nav-manual {
+    position: relative;
     display: flex;
     justify-content: center;
-}   
+    gap: 15px;
+    margin-top: 20px;
+}
 
-.nav-manual .manual_button, .nav-auto div{
-    border: 1px solid #ff0054;
-    padding: 10px;
+.manual-btn {
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
     border-radius: 50%;
     cursor: pointer;
-    transition: 1s;
+    transition: all 0.3s;
+    background: rgba(255,255,255,0.3);
 }
 
-.nav-manual .manual_button:not(:last-child), .nav-auto div:not(:last-child){
-    margin-right: 10px;
+.manual-btn:hover {
+    background: white;
+    transform: scale(1.2);
 }
 
-.nav-manual .manual_button:hover{
-    background-color: #ff0054;
+#radio1:checked ~ .nav-manual .manual-btn:nth-child(1),
+#radio2:checked ~ .nav-manual .manual-btn:nth-child(2),
+#radio3:checked ~ .nav-manual .manual-btn:nth-child(3),
+#radio4:checked ~ .nav-manual .manual-btn:nth-child(4) {
+    background: white;
 }
+
+#radio1:checked ~ .slides-box {
+    transform: translateX(0%);
+}
+#radio2:checked ~ .slides-box {
+    transform: translateX(-25%);
+}
+#radio3:checked ~ .slides-box {
+    transform: translateX(-50%);
+}
+#radio4:checked ~ .slides-box {
+    transform: translateX(-75%);
+}
+
