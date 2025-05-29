@@ -8,4 +8,4 @@ setInterval(() => {
   document.querySelector('.slides-box').style.animation = 'none';
   document.querySelector('.slides-box').offsetHeight;
   document.querySelector('.slides-box').style.animation = null;
-}, 5000);
+}, 10000);
